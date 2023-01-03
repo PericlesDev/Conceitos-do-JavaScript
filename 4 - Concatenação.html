@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somatória com Entrada de Dados por Formulário</title>
+</head>
+<body>
+    <h3>Somatória de dois números inteiros com Coversão de Dados</h3>
+
+<!-- Definição da área e dos elementos de um Formulário */ -->
+<form name="MeuFormulario" action="" method="post">
+Entre com o valor 1: <input type="text" name="f_n1" /><p></p>
+Entre com o valor 2: <input type="text" name="f_n2" /><p></p>
+  <input type="button" name="btn_somar" value="Somar" onclick="soma()" />
+  <input type="reset" name="btn_apagar" value="Apagar" />
+  </form>
+<!-- Final da área de um Formulário -->
+
+<script>
+/* Objetivo: Desenvolver um Programa JavaScript que faça Leitura de 2 números inteiros
+aplique a conversão de valores com parseInt e apresente o resultado de soma entre eles.
+Entrada de Dados por Formulário. */
+
+/* Definição das Variáveis */
+var js_n1;
+var js_n2;
+var js_soma;
+
+/* Definição da função soma() para capturar dados, processar somatória e apresentar
+resultado */
+function soma() {
+    /* Entrada de Dados */
+    js_n1 = parseInt(document.MeuFormulario.f_n1.value);
+    js_n2 = parseInt(document.MeuFormulario.f_n2.value);
+
+    /* Processamento de Dados */
+    js_soma = js_n1 + js_n2;
+    /* Saida de Dados */
+    window.alert('Resultado da Somatória = ' + js_soma.toString());
+}
+    </script>
+</body>
+</html>
